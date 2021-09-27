@@ -56,7 +56,5 @@ function move(){
             modo = 'pegar'
         }
     })
-
-
 }
 move()
