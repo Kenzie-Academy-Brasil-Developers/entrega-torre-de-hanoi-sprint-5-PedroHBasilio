@@ -21,8 +21,7 @@ function move(){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
             modo = 'largar'
-            mensagem("")
-           
+            mensagem("")           
         }
         else if(modo === 'largar'){
             if(torre01.lastChild === null){

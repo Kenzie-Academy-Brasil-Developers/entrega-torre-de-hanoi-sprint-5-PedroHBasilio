@@ -4,18 +4,20 @@ const section = document.getElementById("secao__hanoi");
 const jogar = document.getElementById("jogar")
 const level = document.getElementById("level")
 
-console.log(level.value)
 
-jogar.addEventListener("click", () => {
-    criarTorres()
-    criarDiscos(nDiscos)
-})
 
 section.addEventListener("click", ()=>vitoria(nDiscos))
 reset.addEventListener("click", ()=> resetGame())
 
 let nDiscos = 3
 
+criarTorres()
+criarDiscos(nDiscos)
+
+// jogar.addEventListener("click", () => {
+//     criarTorres()
+//     criarDiscos(nDiscos)
+// })
 
 
 function criarTorres() {
