@@ -9,7 +9,7 @@ const level = document.getElementById("level")
 section.addEventListener("click", ()=>vitoria(nDiscos))
 reset.addEventListener("click", ()=> resetGame())
 
-let nDiscos = 3
+let nDiscos = 5
 
 criarTorres()
 criarDiscos(nDiscos)
