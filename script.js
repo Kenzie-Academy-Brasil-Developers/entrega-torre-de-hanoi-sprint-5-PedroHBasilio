@@ -1,11 +1,21 @@
-
+const reset = document.getElementById('reset');
 const section = document.getElementById("secao__hanoi");
 
+const jogar = document.getElementById("jogar")
+const level = document.getElementById("level")
+
+console.log(level.value)
+
+jogar.addEventListener("click", () => {
+    criarTorres()
+    criarDiscos(nDiscos)
+})
+
 section.addEventListener("click", ()=>vitoria(nDiscos))
+reset.addEventListener("click", ()=> resetGame())
 
 let nDiscos = 3
-criarTorres()
-criarDiscos(nDiscos)
+
 
 
 function criarTorres() {
@@ -25,10 +35,7 @@ function criarTorres() {
     section.appendChild(torre02)
     section.appendChild(torre03)
 
-
-
 }
-// criarTorres()
 
 function criarDiscos(numDiscos){
 
@@ -44,16 +51,12 @@ function criarDiscos(numDiscos){
     }
 }
 
-
-
 function vitoria(n) {
-
 
     if(torre02.childElementCount>= n || torre03.childElementCount>= n )  {
         mensagem("Você ganhou!")
     
     }
-
 }
 
 function mensagem(msg) {
@@ -62,6 +65,17 @@ function mensagem(msg) {
 
     paragrafoMensagem.innerText = msg;
 }
+
+function resetGame(){
+
+    const torre01 = document.getElementById('torre01')
+
+    for(let i = nDiscos; i >= 1; i--){
+        const disco = document.getElementById(`disco${i}`)
+        torre01.appendChild(disco)
+    }
+}
+
 
 
 
