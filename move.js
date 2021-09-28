@@ -19,6 +19,7 @@ function move(){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
             modo = 'largar'
+            mensagem("")
            
         }
         else if(modo === 'largar'){
@@ -33,8 +34,10 @@ function move(){
                 modo = 'pegar'}
 
             else{
-                console.log("disco maior")
+                mensagem("Você não pode fazer isto!")
                 selecionado = null
+                modo = 'pegar'
+
             }
         }
     })
@@ -47,8 +50,9 @@ function move(){
         if(modo === 'pegar'){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
+            mensagem("")
             modo = 'largar'
-            console.log(selecionado)
+            
         }
         else if(modo === 'largar'){
             if(torre02.lastChild === null){
@@ -62,8 +66,9 @@ function move(){
                 modo = 'pegar'}
 
             else{
-                console.log("disco maior")
+                mensagem("Você não pode fazer isto!")
                 selecionado = null
+                modo = 'pegar'
             }
         }
     })
@@ -77,6 +82,7 @@ function move(){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
             modo = 'largar'
+            mensagem("")
             
         }
         else if(modo === 'largar'){
@@ -88,13 +94,25 @@ function move(){
             else if (selecionado.clientWidth<torre03.lastChild.clientWidth){
                 torre03.appendChild(selecionado)
                 contadorMovimento++
-                modo = 'pegar'}
+                modo = 'pegar'
+               
+            }
 
             else{
-                console.log("disco maior")
+                mensagem("Você não pode fazer isto!")
                 selecionado = null
+                modo = 'pegar'
             }
         }
     })
 }
 move()
+
+function mensagem(msg) {
+
+    const paragrafoMensagem = document.getElementById("mensagem");
+
+    paragrafoMensagem.innerText = msg;
+}
+
+
