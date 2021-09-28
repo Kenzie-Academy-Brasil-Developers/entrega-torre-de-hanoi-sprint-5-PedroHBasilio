@@ -5,9 +5,12 @@ const torre03 = document.getElementById('torre03');
 let modo = 'pegar'
 let selecionado 
 let torreAtual
+let contadorMovimento = 0
 
 function move(){
     torre01.addEventListener('click', (evt) =>{   
+
+        console.log(contadorMovimento)
 
         if(selecionado === null){
             modo = 'pegar'
@@ -16,10 +19,23 @@ function move(){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
             modo = 'largar'
+           
         }
         else if(modo === 'largar'){
-            torre01.appendChild(selecionado)
-            modo = 'pegar'
+            if(torre01.lastChild === null){
+                torre01.appendChild(selecionado)
+                contadorMovimento++
+                modo = 'pegar'}
+
+            else if (selecionado.clientWidth<torre01.lastChild.clientWidth){
+                torre01.appendChild(selecionado)
+                contadorMovimento++
+                modo = 'pegar'}
+
+            else{
+                console.log("disco maior")
+                selecionado = null
+            }
         }
     })
 
@@ -35,8 +51,20 @@ function move(){
             console.log(selecionado)
         }
         else if(modo === 'largar'){
-            torre02.appendChild(selecionado)
-            modo = 'pegar'
+            if(torre02.lastChild === null){
+                torre02.appendChild(selecionado)
+                contadorMovimento++
+                modo = 'pegar'}
+
+            else if (selecionado.clientWidth<torre02.lastChild.clientWidth){
+                torre02.appendChild(selecionado)
+                contadorMovimento++
+                modo = 'pegar'}
+
+            else{
+                console.log("disco maior")
+                selecionado = null
+            }
         }
     })
 
@@ -49,11 +77,23 @@ function move(){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
             modo = 'largar'
-            console.log(selecionado)
+            
         }
         else if(modo === 'largar'){
-            torre03.appendChild(selecionado)
-            modo = 'pegar'
+            if(torre03.lastChild === null){
+                torre03.appendChild(selecionado)
+                contadorMovimento++
+                modo = 'pegar'}
+
+            else if (selecionado.clientWidth<torre03.lastChild.clientWidth){
+                torre03.appendChild(selecionado)
+                contadorMovimento++
+                modo = 'pegar'}
+
+            else{
+                console.log("disco maior")
+                selecionado = null
+            }
         }
     })
 }
