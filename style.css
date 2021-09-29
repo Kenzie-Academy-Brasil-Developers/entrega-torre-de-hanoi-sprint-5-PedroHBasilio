@@ -131,6 +131,7 @@ h2{
 
 #reset{
     margin-top: 15px;
+    margin-bottom: 30px;
     padding: 5px 25px;
     font-size: 18px;
     text-align: center;
@@ -147,4 +148,16 @@ h2{
     background-color: #d89312;
     box-shadow: 0 3px #666;
     transform: translateY(4px);
+}
+
+@media (min-width: 768px){
+
+    h1{
+        font-size: 36px;
+        margin-bottom: 0px;
+    }
+
+    .escolher_level form{
+        font-size: 20px;
+    }
 }
