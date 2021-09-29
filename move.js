@@ -2,6 +2,10 @@ const torre01 = document.getElementById('torre01');
 const torre02 = document.getElementById('torre02');
 const torre03 = document.getElementById('torre03');
 
+const jogarFacil = document.getElementById("facil")
+const jogarMedio = document.getElementById("medio")
+const jogarDificil = document.getElementById("dificil")
+
 const movimento = document.getElementById('numero_movimentos')
 
 const reset = document.getElementById('reset');
@@ -147,5 +151,17 @@ function resetGame(){
     contadorMovimento = 0
     movimento.innerText = contadorMovimento
 }
+
+jogarFacil.addEventListener("click", () => {
+    selecionado = null
+})
+
+jogarMedio.addEventListener("click", () => {
+    selecionado = null
+})
+
+jogarDificil.addEventListener("click", () => {
+    selecionado = null
+})
 
 
