@@ -23,6 +23,7 @@ jogar.addEventListener("click", () => {
 })
 
 
+
 function criarTorres() {
 
     const torre01 = document.createElement("div");
