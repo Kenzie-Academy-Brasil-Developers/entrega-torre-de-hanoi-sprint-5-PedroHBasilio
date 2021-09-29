@@ -1,13 +1,167 @@
-#caixa01 {
-
-    width: 200px;
-    height: 200px;
-    background-color: aqua;
+body{
+    background-color: #d8e2dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
 }
 
-#caixa02 {
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    margin-top: 30px;
+}
 
-    width: 200px;
-    height: 200px;
-    background-color: blue;
+.escolher_level{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+    .escolher_level form{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .escolher_level .jogar{
+        padding: 5px 25px;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #faa307;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 7px #999;
+        
+    }
+
+    .escolher_level .jogarAtivo {
+        background-color: #d89312;
+        box-shadow: 0 3px #666;
+        transform: translateY(4px);
+      }
+
+
+#secao__hanoi{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid white 1px;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.torre{
+    height: 150px;
+    background-color: black;
+    width: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    border-radius: 10px 10px 0 0 ;
+    cursor: pointer;
+}
+
+#disco1 {
+    width: 10vw;
+    max-width: 60px;
+    height: 20px;
+    background-color: #e85d04;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#disco2 {
+    width: 15vw;
+    max-width: 80px;
+    height: 20px;
+    background-color:#d00000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#disco3 {
+    width: 20vw;
+    max-width: 100px;
+    height: 20px;
+    background-color:#9d0208;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#disco4{
+    width: 25vw;
+    max-width: 120px;
+    height: 20px;
+    background-color:#6a040f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#disco5 {
+    width: 30vw;
+    max-width: 140px;
+    height: 20px;
+    background-color:#370617;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.msg{
+    height: 40px;
+    font-size: 24px;
+    font-weight: 200;
+    margin: 0;
+    color: #b11f1f;
+}
+
+#numero_movimentos {
+    font-size: 26px;
+}
+
+#reset{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 5px 25px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #faa307;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 7px #999;
+}
+
+#reset:active{
+    background-color: #d89312;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+}
+
+@media (min-width: 768px){
+
+    h1{
+        font-size: 36px;
+        margin-bottom: 0px;
+    }
+
+    .escolher_level form{
+        font-size: 20px;
+    }
 }
