@@ -77,10 +77,10 @@ function resetGame(){
         torre01.appendChild(disco)
     }
 }
+   
 
 
 
-
-
-
+    
+    
 

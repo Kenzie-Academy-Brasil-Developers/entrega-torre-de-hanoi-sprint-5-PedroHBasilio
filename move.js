@@ -20,24 +20,30 @@ function move(){
         if(modo === 'pegar'){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
+            selecionado.style.margin = "0 0 10px 0"
             modo = 'largar'
             mensagem("")           
         }
         else if(modo === 'largar'){
             if(torre01.lastChild === null){
+                
                 torre01.appendChild(selecionado)
+                selecionado.style.margin = "0"
                 modo = 'pegar'
                 nJogadas()
             }
 
             else if (selecionado.clientWidth<torre01.lastChild.clientWidth){
+                
                 torre01.appendChild(selecionado)
+                selecionado.style.margin = "0"
                 modo = 'pegar'
                 nJogadas()
             }
 
             else{
                 mensagem("Você não pode fazer isto!")
+                selecionado.style.margin = "0"
                 selecionado = null
                 modo = 'pegar'
 
@@ -53,6 +59,7 @@ function move(){
         if(modo === 'pegar'){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
+            selecionado.style.margin = "0 0 10px 0"
             mensagem("")
             modo = 'largar'
             
@@ -60,18 +67,21 @@ function move(){
         else if(modo === 'largar'){
             if(torre02.lastChild === null){
                 torre02.appendChild(selecionado)
+                selecionado.style.margin = "0"
                 modo = 'pegar'
                 nJogadas()
             }
 
             else if (selecionado.clientWidth<torre02.lastChild.clientWidth){
                 torre02.appendChild(selecionado)
+                selecionado.style.margin = "0"
                 modo = 'pegar'
                 nJogadas()
             }
 
             else{
                 mensagem("Você não pode fazer isto!")
+                selecionado.style.margin = "0"
                 selecionado = null
                 modo = 'pegar'
             }
@@ -86,6 +96,7 @@ function move(){
         if(modo === 'pegar'){
             torreAtual = evt.currentTarget
             selecionado = torreAtual.lastChild
+            selecionado.style.margin = "0 0 10px 0"
             modo = 'largar'
             mensagem("")
             
@@ -93,18 +104,21 @@ function move(){
         else if(modo === 'largar'){
             if(torre03.lastChild === null){
                 torre03.appendChild(selecionado)
+                selecionado.style.margin = "0"
                 modo = 'pegar'
                 nJogadas()
             }
 
             else if (selecionado.clientWidth<torre03.lastChild.clientWidth){
                 torre03.appendChild(selecionado)
+                selecionado.style.margin = "0"
                 modo = 'pegar'
                 nJogadas()
             }
 
             else{
                 mensagem("Você não pode fazer isto!")
+                selecionado.style.margin = "0"
                 selecionado = null
                 modo = 'pegar'
             }
