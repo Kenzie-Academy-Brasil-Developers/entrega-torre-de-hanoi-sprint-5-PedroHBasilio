@@ -1,10 +1,11 @@
 const reset = document.getElementById('reset');
 const section = document.getElementById("secao__hanoi");
-
-const jogar = document.getElementById("jogar")
+const jogarFacil = document.getElementById("facil")
+const jogarMedio = document.getElementById("medio")
+const jogarDificil = document.getElementById("dificil")
 const level = document.getElementById("level")
 
-let valor = level.value
+let valor 
 
 console.log(valor)
 
@@ -13,13 +14,27 @@ reset.addEventListener("click", ()=> resetGame())
 
 criarTorres()
 
-
-jogar.addEventListener("click", () => {
+function Dificuldade (discos){
+    valor = discos
     torre01.innerHTML = ""
     torre02.innerHTML = ""
     torre03.innerHTML = ""
-    criarDiscos(valor)    
-    console.log(valor) 
+    criarDiscos(valor) 
+    
+    
+
+}
+
+jogarFacil.addEventListener("click", () => {
+    Dificuldade (3) 
+})
+
+jogarMedio.addEventListener("click", () => {
+    Dificuldade (4) 
+})
+
+jogarDificil.addEventListener("click", () => {
+    Dificuldade (5) 
 })
 
 
