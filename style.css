@@ -25,6 +25,13 @@ h2{
     margin-bottom: 40px;
 }
 
+    .escolher_level form{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
     .escolher_level #jogar{
         padding: 5px 25px;
         font-size: 18px;
@@ -66,7 +73,6 @@ h2{
     flex-direction: column-reverse;
     border-radius: 10px 10px 0 0 ;
     cursor: pointer;
-
 }
 
 #disco1 {
@@ -76,6 +82,7 @@ h2{
     background-color: #e85d04;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.2s;
 }
 #disco2 {
     width: 15vw;
@@ -84,6 +91,7 @@ h2{
     background-color:#d00000;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.2s;
 }
 #disco3 {
     width: 20vw;
@@ -92,6 +100,7 @@ h2{
     background-color:#9d0208;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.2s;
 }
 #disco4{
     width: 25vw;
@@ -100,6 +109,7 @@ h2{
     background-color:#6a040f;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.2s;
 }
 #disco5 {
     width: 30vw;
@@ -108,6 +118,7 @@ h2{
     background-color:#370617;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .msg{

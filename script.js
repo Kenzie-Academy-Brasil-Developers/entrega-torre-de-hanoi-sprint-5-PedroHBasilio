@@ -4,20 +4,23 @@ const section = document.getElementById("secao__hanoi");
 const jogar = document.getElementById("jogar")
 const level = document.getElementById("level")
 
+let valor = level.value
 
+console.log(valor)
 
-section.addEventListener("click", ()=>vitoria(nDiscos))
+section.addEventListener("click", ()=>vitoria(valor))
 reset.addEventListener("click", ()=> resetGame())
 
-let nDiscos = 3
-
 criarTorres()
-criarDiscos(nDiscos)
 
-// jogar.addEventListener("click", () => {
-//     criarTorres()
-//     criarDiscos(nDiscos)
-// })
+
+jogar.addEventListener("click", () => {
+    torre01.innerHTML = ""
+    torre02.innerHTML = ""
+    torre03.innerHTML = ""
+    criarDiscos(valor)    
+    console.log(valor) 
+})
 
 
 function criarTorres() {
@@ -72,7 +75,7 @@ function resetGame(){
 
     const torre01 = document.getElementById('torre01')
 
-    for(let i = nDiscos; i >= 1; i--){
+    for(let i = valor; i >= 1; i--){
         const disco = document.getElementById(`disco${i}`)
         torre01.appendChild(disco)
     }

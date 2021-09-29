@@ -4,6 +4,10 @@ const torre03 = document.getElementById('torre03');
 
 const movimento = document.getElementById('numero_movimentos')
 
+const reset = document.getElementById('reset');
+reset.addEventListener("click", ()=> resetGame())
+
+
 let modo = 'pegar'
 let selecionado 
 let torreAtual
@@ -136,6 +140,11 @@ function mensagem(msg) {
 
 function nJogadas(){
     contadorMovimento ++
+    movimento.innerText = contadorMovimento
+}
+
+function resetGame(){
+    contadorMovimento = 0
     movimento.innerText = contadorMovimento
 }
 
