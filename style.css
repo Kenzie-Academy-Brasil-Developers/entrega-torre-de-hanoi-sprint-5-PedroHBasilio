@@ -43,13 +43,14 @@ h2{
         border: none;
         border-radius: 15px;
         box-shadow: 0 7px #999;
-        
+        transition: 0.2s;
     }
 
     .escolher_level .jogarAtivo {
         background-color: #d89312;
         box-shadow: 0 3px #666;
         transform: translateY(4px);
+        transition: 0.2s;
       }
 
 
